@@ -1,6 +1,6 @@
-export const ADDED_TODO = 'todos/added';
-export const DELETED_TODO = 'todos/deleted';
-export const TOGGLED_TODO = 'todos/toggled';
-export const COLORSELECTED_TODOS = 'todos/colorSelected';
-export const ALLCOMPLETED_TODOS = 'todos/allCompleted';
-export const CLEARCOMPLETED_TODOS = 'todos/clearCompleted';
+export const ADDED = "todos/added";
+export const TOGGLED = "todos/toggled";
+export const COLORSELECTED = "todos/colorselected";
+export const DELETED = "todos/deleted";
+export const ALLCOMPLETED = "todos/allcompleted";
+export const CLEARCOMPLETED = "todos/clearcompleted";

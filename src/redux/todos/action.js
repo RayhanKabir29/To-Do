@@ -1,37 +1,51 @@
-import { ADDED_TODO,DELETED_TODO,TOGGLED_TODO,COLORSELECTED_TODOS,ALLCOMPLETED_TODOS,CLEARCOMPLETED_TODOS } from "./actionTypes";
+import {
+    ADDED,
+    ALLCOMPLETED,
+    CLEARCOMPLETED,
+    COLORSELECTED,
+    DELETED,
+    TOGGLED,
+} from "./actionTypes";
 
-export const addedTodo = (text) => ({
-    return: {
-        type: ADDED_TODO,
-        payload: text
-    }
-});
+export const added = (todoText) => {
+    return {
+        type: ADDED,
+        payload: todoText,
+    };
+};
 
-export const deletedTodo = (id) => ({
-    return: {
-        type: DELETED_TODO,
-        payload: id
-    }
-});
- export const toggledTodo = (id) => ({
- 
-        type: TOGGLED_TODO,
-        payload: id
-    
-});
-export const colorSelectedTodos = (id,color) => ({
-    return: {
-        type: COLORSELECTED_TODOS,
-        payload: {color,id}
-    }
-});
-export const allCompletedTodos = () => ({
-    return: {
-        type: ALLCOMPLETED_TODOS
-    }
-});
-export const clearCompletedTodos = () => ({
-    return: {
-        type: CLEARCOMPLETED_TODOS
-    }
-});
+export const toggled = (todoId) => {
+    return {
+        type: TOGGLED,
+        payload: todoId,
+    };
+};
+
+export const colorSelected = (todoId, color) => {
+    return {
+        type: COLORSELECTED,
+        payload: {
+            todoId,
+            color,
+        },
+    };
+};
+
+export const deleted = (todoId) => {
+    return {
+        type: DELETED,
+        payload: todoId,
+    };
+};
+
+export const allCompleted = () => {
+    return {
+        type: ALLCOMPLETED,
+    };
+};
+
+export const clearCompleted = () => {
+    return {
+        type: CLEARCOMPLETED,
+    };
+};

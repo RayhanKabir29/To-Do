@@ -1,40 +1,39 @@
-import {COLORCHANGED_TODO, STATUSCHANGED_TODO} from  "./actionTypes"
-import { initialState } from "./initialState"
+import { COLORCHANGED, STATUSCHANGED } from "./actionTypes";
+import initialState from "./initialState";
 
-const reducer = (state = initialState,action)=>{
-    switch(action.type){
-        case STATUSCHANGED_TODO:
-            return{
+const reducer = (state = initialState, action) => {
+    switch (action.type) {
+        case STATUSCHANGED:
+            return {
                 ...state,
-                status: action.payload
-            }
-            case COLORCHANGED_TODO:
-                const {color,changeType}= action.payload
-                switch (changeType) {
-                    case 'added':
-                        return{
-                           ...state,
-                            colors: [
-                                ...state.colors,
-                                color
-                            ]
-                        }
-                        
-                    case 'removed':
-                        return{
-                            ...state,
-                            colors: state.colors.filter(existingColor=> existingColor !==color)
-                        }
+                status: action.payload,
+            };
 
-                
-                    default:
-                        return state;
-                }
+        case COLORCHANGED:
+            const { color, changeType } = action.payload;
+
+            switch (changeType) {
+                case "added":
+                    return {
+                        ...state,
+                        colors: [...state.colors, color],
+                    };
+
+                case "removed":
+                    return {
+                        ...state,
+                        colors: state.colors.filter(
+                            (existingColor) => existingColor !== color
+                        ),
+                    };
+
+                default:
+                    return state;
+            }
 
         default:
             return state;
     }
-
-}
+};
 
 export default reducer;
