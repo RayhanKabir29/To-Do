@@ -14,10 +14,10 @@ export const deletedTodo = (id) => ({
     }
 });
  export const toggledTodo = (id) => ({
-    return: {
+ 
         type: TOGGLED_TODO,
         payload: id
-    }
+    
 });
 export const colorSelectedTodos = (id,color) => ({
     return: {
