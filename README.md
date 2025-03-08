@@ -54,18 +54,6 @@ Delete tasks when needed.
 
 Track remaining tasks with the counter.
 
-Folder Structure
-
-├── src
-│   ├── components  # UI Components
-│   ├── redux       # Redux store, reducers, actions
-│   ├── styles      # CSS styles
-│   ├── App.js      # Main App component
-│   ├── index.js    # Entry point
-│
-├── public          # Static assets
-├── package.json    # Project dependencies
-
 Contributing
 
 Feel free to fork the repository and submit pull requests with improvements.
