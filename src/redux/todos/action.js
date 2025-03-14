@@ -1,3 +1,4 @@
+
 import {
     ADDED,
     ALLCOMPLETED,
@@ -5,7 +6,15 @@ import {
     COLORSELECTED,
     DELETED,
     TOGGLED,
+    LOADED,
 } from "./actionTypes";
+
+export const loaded =(todos)=>{
+    return{
+        type:LOADED,
+        payload:todos
+    }
+}
 
 export const added = (todoText) => {
     return {
